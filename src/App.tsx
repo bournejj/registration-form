@@ -1,9 +1,9 @@
 import React from 'react';
-import RegistrationForm from './Components/Molecules/Registration-form';
+import RegistrationFormContainer from './Components/Containers/Registration-form-container';
 function App() {
   return (
     <div className="App">
-      <RegistrationForm/>
+      <RegistrationFormContainer/>
     </div>
   );
 }
