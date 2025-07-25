@@ -1,13 +1,20 @@
 import React from 'react';
 
-interface registrationformProps {
+interface registrationFormData {
+  email: String,
+  password: String,
+  plan: String
 }
 
-const RegistrationForm: React.FC<registrationformProps> = ({}) => {
+interface registrationFormProps {
+  registrationFormData: registrationFormData,
+}
+
+const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData}) => {
     return (
         <div className="flex items-center justify-center p-8">
             <div className="">
-              <h1> Registration Form </h1>
+              <h1> Registration form </h1>
               <form action="">
                 <div>
                   <input type="text" />
