@@ -18,6 +18,7 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
             <div className="">
               <h1> email: {registrationFormData.email} </h1>
               <h1> password: {registrationFormData.password} </h1>
+              <h1> plan: {registrationFormData.plan} </h1>
               <form action="">
                 <div>
                   <input 
@@ -36,9 +37,24 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                   />
                 </div>
                 <div>
-                    <input type="radio" name="" id="" />
-                    <input type="radio" name="" id="" />
-                    <input type="radio" name="" id="" />
+                    <input 
+                    type="radio" 
+                    name="plan"
+                    value="Basic"
+                    onChange={handleFormChange} 
+                    />
+                    <input 
+                    type="radio" 
+                    name="plan"
+                    value="Pro" 
+                    onChange={handleFormChange} 
+                    />
+                    <input 
+                    type="radio" 
+                    name="plan"
+                    value="Enterprise" 
+                    onChange={handleFormChange} 
+                    />
                 </div>
                 <button>Cancel</button>
                 <button>Register</button>
