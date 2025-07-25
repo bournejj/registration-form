@@ -2,22 +2,36 @@ import React, {useState} from 'react';
 import RegistrationForm from '../Molecules/Registration-form';
 
 interface registrationFormData {
-    email: String,
-    password: String,
-    plan: String
+    email: string,
+    password: string,
+    plan: string
 }
 
 const RegistrationFormContainer: React.FC = () => {
     const [registrationFormData, setRegistrationFormData] = useState<registrationFormData>({
-        email: 'hello',
-        password: 'hello',
+        email: '',
+        password: '',
         plan: ''
     })
+
+    const handleFormSubmit = () => {
+      console.log('submitted')
+    }
+    
+    const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const {name, value} = e.target;
+    
+      setRegistrationFormData((prev) => ({
+        ...prev,
+        [name]: value
+      }));
+    };
     return (
         <div>
-            <h1>{registrationFormData.email}</h1>
             <RegistrationForm
             registrationFormData={registrationFormData}
+            handleFormChange={handleFormChange}
+            handleFormSubmit={handleFormSubmit}
             />
         </div>
     ) 
