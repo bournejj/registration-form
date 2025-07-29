@@ -1,7 +1,8 @@
 import React from 'react';
 import Input from '../Atoms/Input/Input';
 import Button from '../Atoms/Button/Button';
-// import person from '../../Assets/Images/person-working.jpg';
+import {ReactComponent as EmailIcon} from '../../assets/icons/email.svg';
+import {ReactComponent as PasswordIcon} from '../../assets/icons/password.svg'
 
 interface registrationFormData {
   email: string,
@@ -32,6 +33,7 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                   type="email" 
                   name="email"
                   placeholder='please add email'
+                  Icon={EmailIcon}
                   value={registrationFormData.email}
                   onChange={handleFormChange}
                   />
@@ -42,6 +44,7 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                   type="password"
                   name="password"
                   placeholder='please add password'
+                  Icon={PasswordIcon}
                   value={registrationFormData.password} 
                   onChange={handleFormChange}
                   />

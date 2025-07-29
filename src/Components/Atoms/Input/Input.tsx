@@ -5,15 +5,17 @@ interface inputProps {
     placeholder: string,
     name: string,
     type: string,
+    Icon?: React.FC<React.SVGProps<SVGSVGElement>>,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<inputProps> = ({value, placeholder, type, name, onChange}) => {
+const Input: React.FC<inputProps> = ({value, placeholder, type, name, Icon, onChange}) => {
     return (
         <div>
           <div className='relative'>
+            {Icon && <Icon className='absolute left-3 -translate-y-1/2 top-1/2'/> }   
              <input
-             className='w-full border border-solid rounded-full py-2.5 px-3' 
+             className='w-full border border-solid rounded-full py-2.5 px-3 pl-10' 
              type={type} 
              name={name}
              value={value}
