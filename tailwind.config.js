@@ -5,7 +5,12 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Figtree', 'sans-serif'],
-      }
+      },
+      colors: {
+        everwayBlue: {
+          DEFAULT: '#55BBF0',
+        },
+      },
     },
   },
   plugins: [],

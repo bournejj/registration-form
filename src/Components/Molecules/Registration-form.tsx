@@ -18,14 +18,16 @@ interface registrationFormProps {
 const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData, handleFormChange, handleFormSubmit}: registrationFormProps) => {
     return (
       <div>
-        {/* <img className='w-11' src={person-working} alt="" /> */}
-        <div className="flex items-center justify-center p-8">
-            <div className="">
-              <h1> email: {registrationFormData.email} </h1>
+        <div className='p-6'>
+        <h1 className='text-xl font-normal'>Register</h1>
+          {/* <img className='w-11' src={person-working} alt="" /> */}
+              {/* <h1> email: {registrationFormData.email} </h1>
               <h1> password: {registrationFormData.password} </h1>
-              <h1> plan: {registrationFormData.plan} </h1>
+              <h1> plan: {registrationFormData.plan} </h1> */}
               <form action="">
-                <div>
+                <div className='py-6'>
+                <div className='py-4'>
+                  <span>Email</span>
                   <Input 
                   type="email" 
                   name="email"
@@ -34,7 +36,8 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                   onChange={handleFormChange}
                   />
                 </div>
-                <div>
+                <div className='py-4'>
+                  <span>Password</span>
                   <Input 
                   type="password"
                   name="password"
@@ -43,7 +46,9 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                   onChange={handleFormChange}
                   />
                 </div>
-                <div className='flex'>
+                <span>Plan</span>
+                <div className='flex pt-4 gap-4'>
+                  <div className='flex gap-3'>
                     <Input 
                     type="radio" 
                     name="plan"
@@ -51,6 +56,9 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                     placeholder='please add plan'
                     onChange={handleFormChange} 
                     />
+                    <span>Basic</span>
+                  </div>
+                   <div className='flex gap-3'>
                     <Input 
                     type="radio" 
                     name="plan"
@@ -58,6 +66,9 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                     placeholder='please add plan'
                     onChange={handleFormChange} 
                     />
+                    <span>Pro</span>
+                    </div>
+                    <div className='flex gap-3'>
                     <Input 
                     type="radio" 
                     name="plan"
@@ -65,8 +76,12 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                     placeholder='please add plan' 
                     onChange={handleFormChange} 
                     />
+                    <span>Enterprise</span>
+                    </div>
                 </div>
-                <Button
+                </div>
+                <div className='flex justify-end'>
+                 <Button
                 label='Cancel'
                 variant='secondary'
                 />
@@ -74,8 +89,8 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                 label='Register'
                 variant='primary'
                 />
+                </div>
               </form>
-            </div>
         </div>
       </div>
     )
