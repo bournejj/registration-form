@@ -1,4 +1,5 @@
 import React from 'react';
+import Input from '../Atoms/Input';
 
 interface registrationFormData {
   email: string,
@@ -21,38 +22,43 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
               <h1> plan: {registrationFormData.plan} </h1>
               <form action="">
                 <div>
-                  <input 
+                  <Input 
                   type="email" 
                   name="email"
+                  placeholder='please add email'
                   value={registrationFormData.email}
                   onChange={handleFormChange}
                   />
                 </div>
                 <div>
-                  <input 
+                  <Input 
                   type="password"
                   name="password"
+                  placeholder='please add password'
                   value={registrationFormData.password} 
                   onChange={handleFormChange}
                   />
                 </div>
-                <div>
-                    <input 
+                <div className='flex'>
+                    <Input 
                     type="radio" 
                     name="plan"
                     value="Basic"
+                    placeholder='please add plan'
                     onChange={handleFormChange} 
                     />
-                    <input 
+                    <Input 
                     type="radio" 
                     name="plan"
                     value="Pro" 
+                    placeholder='please add plan'
                     onChange={handleFormChange} 
                     />
-                    <input 
+                    <Input 
                     type="radio" 
                     name="plan"
-                    value="Enterprise" 
+                    value="Enterprise"
+                    placeholder='please add plan' 
                     onChange={handleFormChange} 
                     />
                 </div>
