@@ -1,6 +1,7 @@
 import React from 'react';
 import Input from '../Atoms/Input/Input';
-import Button from '../Atoms/Button/Button'
+import Button from '../Atoms/Button/Button';
+// import person from '../../Assets/Images/person-working.jpg';
 
 interface registrationFormData {
   email: string,
@@ -16,6 +17,8 @@ interface registrationFormProps {
 
 const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData, handleFormChange, handleFormSubmit}: registrationFormProps) => {
     return (
+      <div>
+        {/* <img className='w-11' src={person-working} alt="" /> */}
         <div className="flex items-center justify-center p-8">
             <div className="">
               <h1> email: {registrationFormData.email} </h1>
@@ -74,6 +77,7 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
               </form>
             </div>
         </div>
+      </div>
     )
 }
 
