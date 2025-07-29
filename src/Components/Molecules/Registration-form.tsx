@@ -1,5 +1,6 @@
 import React from 'react';
-import Input from '../Atoms/Input';
+import Input from '../Atoms/Input/Input';
+import Button from '../Atoms/Button/Button'
 
 interface registrationFormData {
   email: string,
@@ -62,8 +63,14 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                     onChange={handleFormChange} 
                     />
                 </div>
-                <button>Cancel</button>
-                <button>Register</button>
+                <Button
+                label='Cancel'
+                variant='secondary'
+                />
+               <Button
+                label='Register'
+                variant='primary'
+                />
               </form>
             </div>
         </div>
