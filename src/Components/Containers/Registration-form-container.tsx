@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import RegistrationForm from '../Molecules/Registration-form';
+import RegistrationForm from '../Organism/Registration-form';
 
 interface registrationFormData {
     email: string,

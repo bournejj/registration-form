@@ -8,7 +8,7 @@ module.exports = {
       },
       colors: {
         everwayBlue: {
-          DEFAULT: '#55BBF0',
+          DEFAULT: '#2B66C1',
         },
       },
     },

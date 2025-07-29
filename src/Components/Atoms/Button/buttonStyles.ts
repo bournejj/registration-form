@@ -4,7 +4,7 @@ export const button = tv({
     base: 'p-4',
     variants: {
         variant: {
-            primary: 'bg-everwayBlue rounded-full text-white',
+            primary: 'bg-everwayBlue rounded-[96px] text-white',
             secondary: ''
         },
     },
