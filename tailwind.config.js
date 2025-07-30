@@ -10,6 +10,7 @@ module.exports = {
         everwayBlue: {
           DEFAULT: '#2B66C1',
         },
+        everywayBlack: '#101828'
       },
     },
   },

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import RegistrationForm from '../Organism/Registration-form';
+import RegistrationForm from '../../organisms/registration-form/Registration-form';
 
 interface registrationFormData {
     email: string,
@@ -13,10 +13,6 @@ const RegistrationFormContainer: React.FC = () => {
         password: '',
         plan: ''
     })
-
-    const handleFormSubmit = () => {
-      console.log('submitted')
-    }
     
     const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const {name, value} = e.target;
@@ -27,13 +23,10 @@ const RegistrationFormContainer: React.FC = () => {
       }));
     };
     return (
-        <div>
-            <RegistrationForm
-            registrationFormData={registrationFormData}
-            handleFormChange={handleFormChange}
-            handleFormSubmit={handleFormSubmit}
-            />
-        </div>
+      <RegistrationForm
+      registrationFormData={registrationFormData}
+      handleFormChange={handleFormChange}
+      />
     ) 
 }
 
