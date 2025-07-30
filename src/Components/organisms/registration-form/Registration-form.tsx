@@ -3,6 +3,7 @@ import InputField from '../../molecules/registration-form/InputField';
 import Button from '../../atoms/button/Button';
 import {ReactComponent as EmailIcon} from '../../../assets/icons/email.svg';
 import {ReactComponent as PasswordIcon} from '../../../assets/icons/password.svg'
+import {ReactComponent as LockIcon} from '../../../assets/icons/lock.svg'
 import personWorking from '../../../assets/Images/person-working.jpg'
 
 interface registrationFormData {
@@ -48,7 +49,7 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                   type="password"
                   name="password"
                   placeholder='Password'
-                  Icon={PasswordIcon}
+                  Icon={LockIcon}
                   value={registrationFormData.password} 
                   onChange={handleFormChange}
                   />
@@ -98,7 +99,7 @@ const RegistrationForm: React.FC<registrationFormProps> = ({registrationFormData
                   </fieldset>
                 </div>
               </div>
-              <div className='flex justify-end border-t-2 py-4 px-6'>
+              <div className='flex justify-end gap-4 border-t-[1px] py-4 px-6'>
                 <Button
                 label='Cancel'
                 variant='secondary'

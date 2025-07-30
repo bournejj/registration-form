@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         sans: ['Figtree', 'sans-serif'],
       },
+      lineHeight: {
+        '150px': '150px',
+      },
       colors: {
         everwayBlue: {
           DEFAULT: '#2B66C1',

@@ -8,11 +8,11 @@ interface buttonProps {
 
 const Button: React.FC<buttonProps> = ({label, variant}) => {
     return (
-         <button
+        <button
          className={button({variant})}
          >
-         {label}
-         </button>
+          <span className=''>{label}</span> 
+        </button>
     )
 }
 
