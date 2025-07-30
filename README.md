@@ -29,7 +29,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - Input variant needed to handle custom input styles
 - Divider colour for header at the top needs to match figma design 
 
-###### Things I would improve 
+##### Things I would improve 
 
 - Add asterisks or text to communicate required feilds upfront, with markup added that instructs screen readers to read the word "Required". 
 - Add a tooltip or instructional information disclosing password contraints to users upfront. A strength meter would be a good addition too, to encourage users to create a secure password.
